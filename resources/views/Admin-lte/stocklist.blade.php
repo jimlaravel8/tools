@@ -34,26 +34,29 @@ Brands
                       <tfoot>
                           <tr>
                             <th>Tool</th>
-                            <th>Serial</th>
-                            <th>Unit</th>
-                            <th>Qty</th>
-                            <th>Toolkit</th>
                             <th>Warehouse</th>
-                            <th>Site</th>
+                            <th>Start mileage</th>
+                            <th>Stop mileage</th>
+                            <th>Qty</th>
+                            <th>Lpo</th>
+                            <th>Description</th>
                             <th>Created</th>
                           </tr>
                       </tfoot>
                       <tbody>
+                        @foreach ($stock as $item)
 
                         <tr>
-                            <td><a>Tiger Nixon</a></td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>2011/04/25</td>
-                            <td>2011/04/25</td>
+                            <td><a>{{ $item->tools }}</a></td>
+                            <td><a>{{ $item->warehouse }}</a></td>
+                            <td><a>{{ $item->start_mileage }}</a></td>
+                            <td><a>{{ $item->stop_mileage }}</a></td>
+                            <td><a>{{ $item->quantities }}</a></td>
+                            <td><a>{{ $item->lpo }}</a></td>
+                            <td><a>{{ $item->description }}</a></td>
+                            <td><a>{{ $item->created_at }}</a></td>
                       </tr>
+                      @endforeach
 
                       </tbody>
                   </table>

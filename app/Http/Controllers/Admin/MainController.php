@@ -43,7 +43,8 @@ class MainController extends Controller
     }
     public function stockList()
     {
-        return view('Admin-lte.stocklist');
+        $stock = StockModel::all();
+        return view('Admin-lte.stocklist', compact('stock'));
     }
     public function manageStockChoice()
     {
